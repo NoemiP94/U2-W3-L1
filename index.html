@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Inserisci il un pet</h1>
+        <form action="">
+          <input
+            type="text"
+            placeholder="Inserisci il nome dell'animale"
+            id="pet-name"
+          />
+          <input
+            type="text"
+            placeholder="Inserisci il nome del proprietario"
+            id="pet-owner"
+          />
+          <input
+            type="text"
+            placeholder="Inserisci la specie"
+            id="pet-species"
+          />
+          <input type="text" placeholder="Inserisci la razza" id="pet-breed" />
+          <button>AGGIUNGI</button>
+        </form>
+      </section>
+      <section>
+        <h3>Lista dei pet</h3>
+        <ul id="pet-list"></ul>
+      </section>
+    </main>
+    <script src="index.js"></script>
+    <script src="form.js"></script>
+  </body>
+</html>
