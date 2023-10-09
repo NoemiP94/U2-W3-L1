@@ -4,6 +4,9 @@ const ownerInput = document.getElementById('pet-owner')
 const speciesInput = document.getElementById('pet-species')
 const breedInput = document.getElementById('pet-breed')
 
+// creo lista dei pets
+const pets = []
+
 // creo classe Pets
 class Pet {
   constructor(_petName, _ownerName, _species, _breed) {
@@ -13,17 +16,16 @@ class Pet {
     this.breed = _breed
   }
   // funzione per comparare i pet
-  comparePets(pet1, pet2) {
-    if (pet1.ownerName === pet2.ownerName) {
-      return true
-    } else {
-      return false
+  comparePets(pet) {
+    for (let i = 0; i < pets.length; i++) {
+      if (this.ownerName === pet[i].ownerName) {
+        console.log(true)
+      } else {
+        console.log(false)
+      }
     }
   }
 }
-
-// creo lista dei pets
-const pets = []
 
 // scrivo la lista
 const petList = function () {
@@ -51,7 +53,7 @@ formValues.addEventListener('submit', function (e) {
 
   pets.push(newPet)
   if (pets.length === 2) {
-    pet.comparePets(pets[0].ownerName, pets[1].ownerName)
+    newPet.comparePets(pets[0].ownerName, pets[1].ownerName)
   }
 
   // svuoto campi
